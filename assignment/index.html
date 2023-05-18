@@ -2,32 +2,25 @@
 
 <html lang="en-US">
     <!-- Table and form for week 2 assignment -->
-
-    <!-- 
-        A four-column table with the following headings:
-        Title - Place the book titles in this column
-        Author - List the author's name
-        Year - List the year the book was published
-        Links - List the links to sites about the book
-        
-        A Web form as follows:
-        Action = submit.php
-        Method = Post
-        Username field
-        Password field
-        Comment box
-        Submit button: submits the form
-        Clear button: clears the form
-     -->
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Week 2 Assignment</title>
+        <style>
+            form {
+                margin-top: 50px; 
+                border: 2px solid rgb(75,75,75);
+                width: fit-content;
+                padding: 15px;
+            }
+
+            form div {
+                margin: 10px;
+            }
+        </style>
     </head>
 
-    <body>
-        
+    <body> 
         <table border="2" cellpadding="5">
             <tr>
                 <th colspan="4">Favorite Books</th>
@@ -58,5 +51,25 @@
             </tr>
         </table>
 
+        <form method="POST" action="submit.php">
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div>
+                <label for="comment">Comments: </label>
+                <textarea id="comment" name="comment" rows="6" cols="50"></textarea>
+            </div>
+            <div>
+                <button type="reset">Clear</button>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
     </body>
 </html>
